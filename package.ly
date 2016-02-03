@@ -38,22 +38,7 @@
 % TODO: Change to lyp
 \include "../breaks/package.ly"
 
-
 \addEdition partial-compilation
-
-
-% Define variables holding the conditional breaks.
-% They expect lists with breaks. Each break can be
-% - an integer representing the bar number
-% - a list with a barnumber and a fraction
-%\registerOption comptools.line-breaks #'()
-%\registerOption comptools.page-breaks #'()
-%\registerOption comptools.page-turns #'()
-
-% Initialize general clipping variables
-%#(define do-clip-region #f)
-%#(define clip-region-from 1)
-%#(define clip-region-to 1)
 
 % Define (and activate) a clipping range.
 % Only this range is typeset and compiled.
@@ -133,10 +118,3 @@ Continuing by compiling the whole score."
 setClipPage =
 #(define-void-function (break-set page) (symbol? integer?)
    (setClipPageRange break-set page page))
-
-\layout {
-  \context {
-    \Score
-    \consists \editionEngraver clip-regions
-  }
-}
