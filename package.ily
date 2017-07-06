@@ -29,14 +29,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% TODO: This may be changed to use lyp
-\include "oll-core.ily"
-
-\registerPackage partial-compilation
-
-% require breaks functionality
-% TODO: Change to lyp
-\include "../breaks/package.ly"
+\include "oll-core/package.ily"
+\loadPackage breaks
 
 \addEdition partial-compilation
 
