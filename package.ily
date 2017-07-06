@@ -41,7 +41,7 @@
 % (if #to is greater than the number of measures in the score
 %  the score is engraved to the end).
 setClipRegion =
-#(define-void-function (from to) (memom? memom?)
+#(define-void-function (from to) (edition-engraver-moment? edition-engraver-moment?)
    (let ((clip-region-from
           (if (integer? from)
               (list from #{ 0/4 #})
