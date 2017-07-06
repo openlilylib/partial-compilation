@@ -2,7 +2,9 @@
 
 % Load the package, this will be redone using lyp
 % Implicitly loads oll-core
-\include "partial-compilation/package.ly"
+\include "oll-core/package.ily"
+\loadPackage partial-compilation
+
 
 
 % Register two alternative break sets.
