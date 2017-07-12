@@ -28,8 +28,7 @@
 %                                                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\include "oll-core/package.ily"
+% Implicitly load the breaks package
 \loadPackage breaks
 
 \addEdition partial-compilation
