@@ -76,20 +76,20 @@ setClipPageRange =
           (page-count (+ 1 (length page-breaks))))
      (format #t "~a\n" page-breaks)
      (if (= 1 page-count)
-         (oll:warn "\\setClipPageRange requested, but no original page breaks defined. 
+         (oll:warn "\\setClipPageRange requested, but no original page breaks defined.
 Continuing by compiling the whole score.")
          ;; We do have page breaks so continue by retrieving barnumbers from that list
          (cond
           ((> from to)
-           (oll:warn "\\setClipPageRange: Negative page range requested. 
+           (oll:warn "\\setClipPageRange: Negative page range requested.
 Continuing by compiling the whole score.~a" ""))
           ((< from 1)
-           (oll:warn "\\setClipPageRange: Page number below 1 requested. 
+           (oll:warn "\\setClipPageRange: Page number below 1 requested.
 Continuing by compiling the whole score.~a" ""))
           ((> to page-count)
-           (oll:warn "\\setClipPageRange: Page index out of range (~a). 
+           (oll:warn "\\setClipPageRange: Page index out of range (~a).
 Continuing by compiling the whole score."
-             (format "from ~a to ~a requested, ~a available" from to page-count)))
+             (format #f "from ~a to ~a requested, ~a available" from to page-count)))
           (else
            (let ((from-bar (if (eq? from 1)
                                ;; First page is not included in the originalPageBreaks list
